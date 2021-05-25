@@ -19,3 +19,22 @@ self.addEventListener('install', event => {
             .then(self.skipWaiting())
     );
 });
+
+self.addEventListener('active', event => {
+    const currentCaches = [PRECACHE, RUNTIME];
+    event.waitUntil(
+        caches
+            .keys()
+            .then(cachesName => {
+                return cachesName.filter(cachesName => !currentCaches.includes(cachesName));
+            })
+            .then(cachesToDelete => {
+                return Promise.all(
+                    cachesToDelete.map(cacheToDelete => {
+                        return caches.delete(cacheToDelete);
+                    })
+                );
+            })
+            .then(() => self.ClientRectList.claim())
+    );
+});
