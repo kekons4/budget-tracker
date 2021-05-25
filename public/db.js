@@ -13,7 +13,7 @@ request.onupgradeneeded = e => {
 
     db = e.target.result;
 
-    if(db.objectStoresNames.length === 0) {
+    if(db.objectStoreNames.length === 0) {
         db.createObjectStore('BudgetStore', { autoIncrement: true });
     }
 };
