@@ -10,3 +10,4 @@ is lost then all data will be cached on the users browser.
 
 ![Screenshot_one](/assets/screenshot_one.png)
 ##### Screenshot of budget tracker single page application
+
