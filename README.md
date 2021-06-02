@@ -8,6 +8,6 @@ is lost then all data will be cached on the users browser.
 
 ## Screenshots
 
-![Screenshot_one](/public/assets/screenshot_one.png)
+![Screenshot_one](/public/assets/screenshot_one.PNG)
 ##### Screenshot of budget tracker single page application
 
